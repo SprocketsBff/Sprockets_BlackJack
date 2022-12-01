@@ -1,0 +1,53 @@
+/* (A) ENTIRE PAGE */
+* {
+  font-family: arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* (B) DEALER & PLAYER */
+/* (B1) CONTAINERS */
+#deal-data, #play-data, #deal-cards, #play-cards, #play-control { padding: 20px; }
+#deal-data, #play-data { font-weight: 700; }
+#deal-cards, #play-cards { min-height: 120px; }
+#deal-data { background: #b8b2b2; }
+#deal-cards { background: #000000; }
+#play-data { background: #b8b4b4; }
+#play-cards { background: #000000; }
+#play-control { background: #b8b4b4; }
+#deal-stand, #play-stand {
+  display: none; padding: 5px;
+  color: #fff; background: #f40606;
+}
+#deal-stand.stood, #play-stand.stood { display: inline-block; }
+
+/* (B2) CARDS */
+#deal-cards, #play-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.bj-card {
+  display: flex;
+  align-items: left; justify-content: left;
+  margin: 10px;
+  width: 100px; height: 100px;
+  font-size: 4em;
+  text-align: center;
+  background: url('./Sprocket_in_good_lighting.jpg');
+  background-size:cover;
+}
+#deal-first .front { display: none; }
+#deal-first.show .back { display: none; }
+#deal-first.show .front { display: block; }
+
+/* (C) PLAY CONTROLS */
+#play-control input {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: 0;
+  color: #fff;
+  background: #000000;
+}
+#playc-hit, #playc-stand { display: none; }
+#play-control.started #playc-start { display: none; }
+#play-control.started #playc-hit, #play-control.started #playc-stand { display: inline-block; }
